@@ -7,6 +7,7 @@ const lightbox = new SimpleLightbox('.gallery a', {
 });
 const gallery = document.querySelector('.gallery');
 const loaderContainer = document.querySelector('.loader-container');
+const loadMoreButton = document.querySelector('.load-more-button');
 
 /**
  * Creates gallery HTML markup and adds it to the gallery container
@@ -74,7 +75,7 @@ export function clearGallery() {
  */
 
 export function showLoader() {
-  loaderContainer.style.display = 'flex';
+  loaderContainer.classList.add('visible');
 }
 
 /**
@@ -84,4 +85,24 @@ export function showLoader() {
 
 export function hideLoader() {
   loaderContainer.style.display = 'none';
+}
+
+/**
+ * Shows Load More button
+ * @returns {void}
+ */
+export function showLoadMoreButton() {
+  if (loadMoreButton) {
+    loadMoreButton.classList.add('visible');
+  }
+}
+
+/**
+ * Hides Load More button
+ * @returns {void}
+ */
+export function hideLoadMoreButton() {
+  if (loadMoreButton) {
+    loadMoreButton.classList.remove('visible');
+  }
 }

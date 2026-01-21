@@ -9,13 +9,15 @@ const BASE_URL = 'https://pixabay.com/api/';
  * @returns {Promise<Object>} Response from Pixabay API
  */
 
-export async function getImageByQuery(query) {
+export async function getImageByQuery(query, page) {
   const params = {
     key: API_KEY,
     q: query,
     image_type: 'photo',
     orientation: 'horizontal',
     safesearch: true,
+    page: page,
+    per_page: 15,
   };
 
   try {

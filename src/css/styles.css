@@ -68,6 +68,37 @@
   background-color: #6c8cff;
 }
 
+/* Load more container styles */
+.load-more-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Load more button styles */
+.load-more-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #4e75ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: none;
+}
+
+.load-more-button.visible {
+  display: block;
+}
+
+.load-more-button:hover {
+  background-color: #6c8cff;
+}
+
 /* Loader styles */
 .loader-container {
   display: flex;
@@ -124,7 +155,9 @@
   flex-direction: column;
   border: 1px solid #808080;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .gallery-item:hover {
