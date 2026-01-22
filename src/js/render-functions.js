@@ -75,7 +75,9 @@ export function clearGallery() {
  */
 
 export function showLoader() {
-  loaderContainer.classList.add('visible');
+  if (loaderContainer) {
+    loaderContainer.classList.add('visible');
+  }
 }
 
 /**
@@ -84,7 +86,9 @@ export function showLoader() {
  */
 
 export function hideLoader() {
-  loaderContainer.style.display = 'none';
+  if (loaderContainer) {
+    loaderContainer.classList.remove('visible');
+  }
 }
 
 /**

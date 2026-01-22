@@ -102,16 +102,20 @@
 
 /* Loader styles */
 .loader-container {
+  display: none;
+  min-height: 48px;
+}
+
+.loader-container.visible {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 200px;
 }
 
 .loader {
   position: relative;
-  width: 64px;
-  height: 64px;
+  width: 24px;
+  height: 24px;
   background-color: rgba(0, 0, 0, 0.5);
   transform: rotate(45deg);
   overflow: hidden;
